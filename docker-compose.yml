@@ -1,0 +1,13 @@
+version: "2"
+services:
+  node:
+    image: "node:8"
+    user: "node"
+    working_dir: /Users/Meaw/Downloads/node-api-20181222T173112Z-001/node-api
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/Users/Meaw/Downloads/node-api-20181222T173112Z-001/node-api
+    ports:
+      - "3000:3000"
+    command: "npm start"
